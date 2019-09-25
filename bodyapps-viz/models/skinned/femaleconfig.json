@@ -1,0 +1,13 @@
+{
+	"baseUrl":		"models/skinned/UCS/",
+	"character":	"female.js",
+	"skins": 		["Highlighted_Muscles.jpg"],
+	"morphs": 		["Height","Breast","Waist","Hip Girth"],
+	"morphslimit"	: 	    [155,85,75,100],
+	"morphslowlimit": 		[110,70,65,86],
+	"morphshighlimit": 		[210,100,85,114],
+	"x":	0,
+	"y":	2400,
+	"z":	100,
+	"s":70
+}
