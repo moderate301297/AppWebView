@@ -62,16 +62,25 @@ export default class App extends Component {
 
 - Dữ liệu truyền đi ngay trên parameter của url, sau đó được phân tách và truyền cho config để hiện kết quả:
 
+  #### Index.html
+  
   ```
-  var url_string = window.location.href;
-  console.log("url: ", url_string);
-  var url = new URL(url_string);
-  var morphslimit = url.searchParams.get("result");
-  var morphslimit = morphslimit.split(',').map(function (item) {
-  return parseInt(item, 10);
-  });
+  loader.load("models/skinned/testconfig.json", function (text) {
+      var config = JSON.parse(text);
+      var url_string = window.location.href;
+      console.log("url: ", url_string);
+      var url = new URL(url_string);
+      var morphslimit = url.searchParams.get("result");
+    var morphslimit = morphslimit.split(',').map(function (item) {
+      return parseInt(item, 10);
+      });
+      console.log(morphslimit);
+      config.morphslimit = morphslimit;
+      character.loadParts(config);
+      scene.add(character.root);
+      });
   ```
-
+  
   
 
 
